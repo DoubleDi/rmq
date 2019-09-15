@@ -7,8 +7,6 @@ import (
 	"sync"
 	"sync/atomic"
 	"time"
-
-	"github.com/adjust/uniuri"
 )
 
 const (
@@ -278,7 +276,7 @@ func (queue *redisQueue) addConsumer(tag string) string {
 		log.Panicf("rmq queue failed to add consumer, call StartConsuming first! %s", queue)
 	}
 
-	name := fmt.Sprintf("%s-%s", tag, uniuri.NewLen(6))
+	name := tag
 
 	// add consumer to list of consumers of this queue
 	if ok := queue.redisClient.SAdd(queue.consumersKey, name); !ok {

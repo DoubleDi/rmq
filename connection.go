@@ -1,7 +1,6 @@
 package rmq
 
 import (
-	"fmt"
 	"log"
 	"strings"
 	"time"
