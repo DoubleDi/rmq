@@ -61,6 +61,10 @@ func (queue *TestQueue) ReturnAllRejected() int {
 	return 0
 }
 
+func (queue *TestQueue) ReturnAllUnacked() int {
+	return 0
+}
+
 func (queue *TestQueue) PurgeReady() int {
 	return 0
 }

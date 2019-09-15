@@ -42,6 +42,7 @@ type Queue interface {
 	PurgeRejected() int
 	ReturnRejected(count int) int
 	ReturnAllRejected() int
+	ReturnAllUnacked() int
 	Close() bool
 }
 
