@@ -41,7 +41,7 @@ func OpenConnectionWithTestRedisClient(tag string) *redisConnection {
 }
 
 func openConnectionWithRedisClient(tag string, redisClient RedisClient) *redisConnection {
-	name := fmt.Sprintf("%s-%s", tag, uniuri.NewLen(6))
+	name := tag
 
 	connection := &redisConnection{
 		Name:         name,
